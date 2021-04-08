@@ -1,0 +1,17 @@
+docker run busybox echo hi there
+
+docker ps
+docker ps --all
+docker ps -a
+
+docker run = docker create + docker start
+docker create hello-world
+docker start -a <container id>  // -a = attach to the container and watch for output
+
+docker system prune // removes:
+                    // - all stopped containers
+                    // - networks not used
+                    // - dangling images
+                    // - build cache
+
+docker logs <container id>
