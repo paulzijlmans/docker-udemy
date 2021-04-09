@@ -23,3 +23,6 @@ docker exec -it <container id> <command>  // -it allows us to provide input to t
 docker run redis
 docker exec -it <container-id> redis-cli
 docker exec -it <container-id> sh
+docker run -it busybox sh
+
+docker build .
