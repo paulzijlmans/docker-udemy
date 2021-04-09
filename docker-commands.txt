@@ -15,3 +15,11 @@ docker system prune // removes:
                     // - build cache
 
 docker logs <container id>
+
+docker stop <container id>  // sends SIGTERM, shut down on your own time, time for cleanup, 10s until docker kill is executed
+docker kill <container id>  // sends SIGKILL, shut down right now
+
+docker exec -it <container id> <command>  // -it allows us to provide input to the container
+docker run redis
+docker exec -it <container-id> redis-cli
+docker exec -it <container-id> sh
