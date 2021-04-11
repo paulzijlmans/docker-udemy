@@ -26,3 +26,7 @@ docker exec -it <container-id> sh
 docker run -it busybox sh
 
 docker build .
+docker build -t pzijlmans/redis:latest .
+docker run pzijlmans/redis
+
+docker commit -c 'CMD ["redis-server"]' <container id>  // create image out of running container, -c = startup command
