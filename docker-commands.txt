@@ -30,3 +30,7 @@ docker build -t pzijlmans/redis:latest .
 docker run pzijlmans/redis
 
 docker commit -c 'CMD ["redis-server"]' <container id>  // create image out of running container, -c = startup command
+
+docker images   // list local images
+
+docker run -p <local host port> : <container port> <image id/name>
