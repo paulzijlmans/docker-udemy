@@ -34,3 +34,10 @@ docker commit -c 'CMD ["redis-server"]' <container id>  // create image out of r
 docker images   // list local images
 
 docker run -p <local host port> : <container port> <image id/name>
+
+docker-compose up           // docker run myimage
+docker-compose up --build   // docker build .   +  docker run myimage
+docker-compose up -d        // detach
+docker-compose down
+
+docker-compose ps   // need to be run from dir with docker-compose.yml file in it
