@@ -41,3 +41,10 @@ docker-compose up -d        // detach
 docker-compose down
 
 docker-compose ps   // need to be run from dir with docker-compose.yml file in it
+
+docker build -f <dockerfile> .
+
+docker run -it -p 3000:3000 IMAGE_ID
+
+docker run -p 3000:3000 -v $(pwd):/home/node/app <image id>
+docker run -p 3000:3000 -v /home/node/app/node_modules -v $(pwd):/home/node/app <image id>
