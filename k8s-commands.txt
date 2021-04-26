@@ -1,0 +1,11 @@
+kubectl apply -f <filename>   // changes the current config of the cluster
+
+kubectl get <object type>     // retrieves info about running objects
+kubectl get pods [-o wide]
+kubectl get services
+kubectl get deployments
+
+kubectl describe <object type> [<object name>]
+kubectl describe pod
+
+kubectl delete -f <config file>   // delete a running object
