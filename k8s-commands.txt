@@ -1,4 +1,5 @@
 kubectl apply -f <filename>   // changes the current config of the cluster
+kubectl apply -f <directory>  // applies all config files in the directory
 
 kubectl get <object type>     // retrieves info about running objects
 kubectl get pods [-o wide]
@@ -9,6 +10,7 @@ kubectl describe <object type> [<object name>]
 kubectl describe pod
 
 kubectl delete -f <config file>   // delete a running object
+kubectl delete <object type> <object name>
 
-kubectl set image <object type> / <object name> <container name> = <new image to use>
+kubectl set image <object type>/<object name> <container name>=<new image to use>
 kubectl set image deployment/client-deployment client=pzijlmans/multi-client:v5
