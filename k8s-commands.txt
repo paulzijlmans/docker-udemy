@@ -5,12 +5,24 @@ kubectl get <object type>     // retrieves info about running objects
 kubectl get pods [-o wide]
 kubectl get services
 kubectl get deployments
+kubectl get pv                // persistent volume
+kubectl get pvc               // persistent volume claim
+kubectl get secret
 
-kubectl describe <object type> [<object name>]
+kubectl describe <object_type> [<object_name>]
 kubectl describe pod
 
-kubectl delete -f <config file>   // delete a running object
-kubectl delete <object type> <object name>
+kubectl delete -f <config_file>   // delete a running object
+kubectl delete <object_type> <object_name>
 
-kubectl set image <object type>/<object name> <container name>=<new image to use>
+kubectl set image <object_type>/<object_name> <container_name>=<new_image_to_use>
 kubectl set image deployment/client-deployment client=pzijlmans/multi-client:v5
+
+kubectl logs <pod_name>
+
+kubectl get storageclass
+kubectl describe storageclass
+
+// create a secret (imperative command)
+kubectl create secret <type_of_secret> <secret_name> --from-literal <key>=<value>
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
