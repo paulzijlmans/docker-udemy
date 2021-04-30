@@ -3,8 +3,10 @@ Pod: Runs one or more closely related containers.
 Deployment: Administers and manages a set of pods.
 
 Service: Sets up networking in a Kubernetes cluster
-  - ClusterIP:  Exposes a set of pods to other objects in the cluster
-  - NodePort:   Exposes a set of pods to the outside world (only good for dev purposes)
+  - ClusterIP:    Exposes a set of pods to other objects in the cluster
+  - NodePort:     Exposes a set of pods to the outside world (only good for dev purposes)
+  - LoadBalancer: Legacy way of getting network traffic into a cluster
+  - Ingress:      Exposes a set of services to the outside world
 
 Secret: Securely stores a piece of information in the cluster,
         such as a database password.
@@ -21,3 +23,9 @@ Persistent Volume:
 ReadWriteOnce:  Can be used by a single node.
 ReadOnlyMany:   Multiple nodes can read from this.
 ReadWriteMany:  Can be read and written to by many nodes.
+
+Ingress Config:     Object that has a set of configuration rules describing
+                    how traffic should be routed.
+Ingress Controller: Watches for changes to the ingress and updates the 'thing' that handles traffic.
+
+ingress-nginx:  https://github.com/kubernetes/ingress-nginx

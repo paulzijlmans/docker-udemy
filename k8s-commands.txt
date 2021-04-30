@@ -26,3 +26,5 @@ kubectl describe storageclass
 // create a secret (imperative command)
 kubectl create secret <type_of_secret> <secret_name> --from-literal <key>=<value>
 kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
+
+kubectl proxy   // start kubernetes dashboard
