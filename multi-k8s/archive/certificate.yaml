@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: paulzijlmans-nl-tls
+spec:
+  secretName: paulzijlmans-nl
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: paulzijlmans.nl
+  dnsNames:
+    - paulzijlmans.nl
+    - www.paulzijlmans.nl

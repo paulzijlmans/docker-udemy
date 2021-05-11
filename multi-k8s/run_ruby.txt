@@ -1,0 +1,10 @@
+Run ruby in Docker to be able to install Travis CLI and encrypt the Google Service Account File.
+
+docker run -it -v $(pwd):/app ruby:2.4 sh
+
+gem install travis
+
+travis login
+travis login --github-token YOUR_PERSONAL_TOKEN --com
+
+travis encrypt-file service-account.json -r paulzijlmans/multi-k8s --com
